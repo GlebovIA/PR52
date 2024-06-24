@@ -1,11 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using PR52.Classes.Common;
+using PR52.Models;
 using System;
 using System.Collections.Generic;
 
 namespace PR52.Classes.Contexts
 {
-    public class WorkContext
+    public class WorkContext : Work
     {
         public WorkContext(int id, int idDiscipline, int idType, DateTime date, string name, int semester) : base(id, idDiscipline, idType, date, name, semester) { }
         public static List<WorkContext> AllWorks()

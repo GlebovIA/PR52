@@ -1,10 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using PR52.Classes.Common;
+using PR52.Models;
 using System.Collections.Generic;
 
 namespace PR52.Classes.Contexts
 {
-    public class EvaluationContext
+    public class EvaluationContext : Evaluation
     {
         public EvaluationContext(int id, int idWork, int idStudent, string value, string lateness) : base(id, idWork, idStudent, value, lateness) { }
         public static List<EvaluationContext> AllEvaluations()
