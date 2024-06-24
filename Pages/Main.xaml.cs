@@ -1,4 +1,5 @@
-﻿using PR52.Classes.Contexts;
+﻿using PR52.Classes.Common;
+using PR52.Classes.Contexts;
 using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -52,6 +53,15 @@ namespace PR52.Pages
                 SearchStudent = AllStudents.FindAll(x => x.IdGroup == IdGroup);
             }
             CreateStudents(SearchStudent.FindAll(x => $"{x.Lastname}.{x.Name}".Contains(FioTBx.Text)));
+        }
+
+        private void ReportGeneration(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (GroupCB.SelectedIndex != GroupCB.Items.Count - 1)
+            {
+                int IdGroup = AllGroups.Find(x => x.Name == GroupCB.SelectedItem).Id;
+                Report.Group(IdGroup, this);
+            }
         }
     }
 }
