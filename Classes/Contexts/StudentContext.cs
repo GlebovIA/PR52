@@ -13,7 +13,7 @@ namespace PR52.Classes.Contexts
         {
             List<StudentContext> allStudents = new List<StudentContext>();
             MySqlConnection connection = Connection.OpenConnection();
-            MySqlDataReader DBStudents = Connection.Query("Select * from `student` order by `Name`", connection);
+            MySqlDataReader DBStudents = Connection.Query("Select * from `student` order by `LastName`", connection);
             while (DBStudents.Read())
             {
                 allStudents.Add(new StudentContext(

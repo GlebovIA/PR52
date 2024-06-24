@@ -12,7 +12,7 @@ namespace PR52.Classes.Contexts
         {
             List<EvaluationContext> allEvaluations = new List<EvaluationContext>();
             MySqlConnection connection = Connection.OpenConnection();
-            MySqlDataReader DBEvaluation = Connection.Query("Select * from `evaluations`;", connection);
+            MySqlDataReader DBEvaluation = Connection.Query("Select * from `evaluation`;", connection);
             while (DBEvaluation.Read())
             {
                 allEvaluations.Add(new EvaluationContext(
