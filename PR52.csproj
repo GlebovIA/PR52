@@ -120,6 +120,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Common\Connection.cs" />
+    <Compile Include="Classes\Contexts\DisciplineContext.cs" />
+    <Compile Include="Classes\Contexts\EvaluationContext.cs" />
+    <Compile Include="Classes\Contexts\GroupContext.cs" />
+    <Compile Include="Classes\Contexts\StudentContext.cs" />
+    <Compile Include="Classes\Contexts\WorkContext.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
