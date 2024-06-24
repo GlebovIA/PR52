@@ -17,7 +17,8 @@
                 </Grid.ColumnDefinitions>
                 <Label Content="Выберите группу:" VerticalAlignment="Top" Margin="5, 5, 10.4, 0"/>
                 <ComboBox x:Name="GroupCB" SelectionChanged="SelectGroup" VerticalAlignment="Top" Margin="5, 31, 10.4, 0" Height="25"/>
-                <Label Content="Фамилия и имя студента:" VerticalAlignment="Top" Margin="9.6, 31, 10, 0" Grid.Column="1" Height="25" KeyUp="SelectStudents"/>
+                <Label Content="Фамилия и имя студента:" VerticalAlignment="Top" Margin="9.6, 5, 10, 0" Grid.Column="1"/>
+                <TextBox x:Name="FioTBx" VerticalAlignment="Top" Margin="9.6, 31, 10, 0" Grid.Column="1" Height="25" KeyUp="SelectStudents"/>
             </Grid>
             <ScrollViewer Margin="0, 65, 0, 39.6">
                 <StackPanel x:Name="Parent">
